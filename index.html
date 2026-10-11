@@ -3,153 +3,879 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ajay Rawat — B.Tech Computer Science student, developer and problem solver.">
-  <title>Ajay Rawat | Developer Portfolio</title>
+  <meta name="description" content="Ajay Rawat — Software Development Engineer Intern Candidate | Java, C++, DSA, Spring Boot, React. B.Tech CSE at Physics Wallah Institute of Innovation.">
+  <meta name="keywords" content="Ajay Rawat, SDE Intern, Java, C++, DSA, LeetCode, Spring Boot, React, Physics Wallah Institute of Innovation, Portfolio">
+  <meta name="author" content="Ajay Rawat">
+  <title>Ajay Rawat | Software Development Engineer Intern Candidate</title>
+  
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="cursor-glow"></div>
-  <header class="nav">
-    <a class="logo" href="#home">AR<span>.</span></a>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#certifications">Credentials</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <a class="nav-cta" href="#contact">Let's talk ↗</a>
+<body data-theme="dark">
+  <!-- Interactive Ambient Background -->
+  <div class="ambient-mesh" aria-hidden="true"></div>
+  <div class="cursor-spotlight" id="cursorSpotlight" aria-hidden="true"></div>
+
+  <!-- Toast Notification System -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- Navigation -->
+  <header class="navbar" id="topNav">
+    <div class="nav-container">
+      <a class="nav-brand" href="#home" aria-label="Ajay Rawat Home">
+        <span class="brand-bracket">&lt;</span>
+        <span class="brand-name">ajay.rawat</span>
+        <span class="brand-bracket">/&gt;</span>
+      </a>
+
+      <nav class="nav-links" id="navMenu">
+        <a href="#about" class="nav-item">About</a>
+        <a href="#skills" class="nav-item">Skills</a>
+        <a href="#projects" class="nav-item">Projects</a>
+        <a href="#competitive" class="nav-item">DSA &amp; Stats</a>
+        <a href="#education" class="nav-item">Education</a>
+        <a href="#contact" class="nav-item">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="terminal-toggle-btn" id="terminalToggleBtn" title="Toggle Interactive Shell (Press '`' or click)" aria-label="Toggle Interactive Shell">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+          <span class="kbd-hint">`</span>
+        </button>
+        <a class="btn btn-outline btn-sm" href="mailto:coderajay86091@gmail.com">
+          <span>Let's Talk</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        </a>
+        <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
   </header>
 
   <main>
-    <section id="home" class="hero section">
-      <div class="hero-copy reveal">
-        <p class="eyebrow"><span class="dot"></span> AVAILABLE FOR OPPORTUNITIES</p>
-        <h1>Hi, I'm <span>Ajay Rawat.</span><br>Developer & problem solver.</h1>
-        <p class="hero-text">
-          B.Tech Computer Science student focused on building a strong software-development foundation,
-          solving problems with DSA and OOP, and turning ideas into useful web experiences.
-        </p>
-        <div class="hero-actions">
-          <a class="button primary" href="#projects">Explore my work ↓</a>
-          <a class="button ghost" href="mailto:Harshg7110@gmail.com">Email me ↗</a>
+    <!-- HERO SECTION -->
+    <section id="home" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="status-pill reveal">
+            <span class="pulse-beacon"></span>
+            <span class="status-text">Available for SDE Intern Opportunities</span>
+          </div>
+
+          <h1 class="hero-title reveal">
+            Architecting reliable backend services &amp; solving algorithmic puzzles.
+          </h1>
+
+          <p class="hero-subtitle reveal">
+            I'm <strong class="text-white">Ajay Rawat</strong>, a Computer Science undergraduate at 
+            <span class="highlight">Physics Wallah Institute of Innovation</span> ('29). 
+            Passionate about Java, C++, backend architecture, object-oriented systems, and competitive programming with 
+            <strong class="text-white">387+ LeetCode problems</strong> conquered.
+          </p>
+
+          <div class="hero-cta-group reveal">
+            <a href="#projects" class="btn btn-primary">
+              <span>View Projects</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </a>
+            <button class="btn btn-secondary copy-btn" data-copy="coderajay86091@gmail.com" title="Copy email address">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>coderajay86091@gmail.com</span>
+            </button>
+            <a href="https://github.com/ajayrawat3715" target="_blank" rel="noopener noreferrer" class="btn btn-icon" title="GitHub Profile" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+          </div>
+
+          <!-- Quick Proof Chips -->
+          <div class="proof-bar reveal">
+            <div class="proof-item">
+              <span class="proof-num">387+</span>
+              <span class="proof-label">LeetCode Solved</span>
+            </div>
+            <div class="proof-divider"></div>
+            <div class="proof-item">
+              <span class="proof-num">1440</span>
+              <span class="proof-label">Contest Rating</span>
+            </div>
+            <div class="proof-divider"></div>
+            <div class="proof-item">
+              <span class="proof-num">ICPC</span>
+              <span class="proof-label">Prelims Contestant</span>
+            </div>
+            <div class="proof-divider"></div>
+            <div class="proof-item">
+              <span class="proof-num">8.0</span>
+              <span class="proof-label">CGPA (1st Year)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Developer Shell Widget -->
+        <div class="hero-terminal-wrapper reveal">
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="terminal-title">ajay@system: ~ (zsh)</div>
+              <div class="terminal-badge">LIVE REPL</div>
+            </div>
+            <div class="terminal-body" id="terminalOutput">
+              <div class="term-line prompt">
+                <span class="term-user">ajay@pw-ioi</span>:<span class="term-path">~</span>$ <span class="term-cmd">cat profile.json</span>
+              </div>
+              <div class="term-output">
+                <span class="t-key">"name"</span>: <span class="t-str">"Ajay Rawat"</span>,<br>
+                <span class="t-key">"role"</span>: <span class="t-str">"SDE Intern Candidate"</span>,<br>
+                <span class="t-key">"primary_languages"</span>: [<span class="t-str">"Java"</span>, <span class="t-str">"C++"</span>, <span class="t-str">"Python"</span>, <span class="t-str">"JavaScript"</span>, <span class="t-str">"Rust"</span>],<br>
+                <span class="t-key">"backend_focus"</span>: [<span class="t-str">"Spring Boot"</span>, <span class="t-str">"REST APIs"</span>, <span class="t-str">"PostgreSQL"</span>, <span class="t-str">"Node.js"</span>],<br>
+                <span class="t-key">"status"</span>: <span class="t-green">"Actively seeking SDE internships"</span>
+              </div>
+              <div class="term-line prompt">
+                <span class="term-user">ajay@pw-ioi</span>:<span class="term-path">~</span>$ <span class="term-cmd">./run-stats.sh</span>
+              </div>
+              <div class="term-output t-stats-box">
+                <div>[✓] LeetCode: 387+ Solved (218 Easy | 158 Med | 11 Hard)</div>
+                <div>[✓] 100 Days Badge (2026) | Contest Rating: 1440</div>
+                <div>[✓] ICPC Prelims Candidate | RIFT '26 PW IOI Hackathon</div>
+              </div>
+              <div class="term-line prompt active-prompt">
+                <span class="term-user">ajay@pw-ioi</span>:<span class="term-path">~</span>$ 
+                <input type="text" id="terminalInput" class="terminal-inline-input" placeholder="Type 'help' or click commands below..." autocomplete="off" spellcheck="false">
+              </div>
+            </div>
+            <div class="terminal-quick-actions">
+              <span class="quick-title">Quick commands:</span>
+              <button class="cmd-pill" data-cmd="skills">skills</button>
+              <button class="cmd-pill" data-cmd="projects">projects</button>
+              <button class="cmd-pill" data-cmd="dsa">dsa</button>
+              <button class="cmd-pill" data-cmd="contact">contact</button>
+              <button class="cmd-pill" data-cmd="clear">clear</button>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="hero-card reveal">
-        <div class="card-top"><span>01</span><span>ABOUT.ME</span></div>
-        <div class="avatar">AR</div>
-        <p class="card-label">B.TECH · CSE</p>
-        <h3>Building the fundamentals<br>that scale.</h3>
-        <div class="mini-stats">
-          <div><strong>7.2</strong><small>SGPA</small></div>
-          <div><strong>4+</strong><small>LANGUAGES</small></div>
-          <div><strong>∞</strong><small>LEARNING</small></div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section section-bordered">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">ENGINEERING PROFILE</div>
+          <h2 class="section-title">Beyond syntax: Building software with architectural rigor.</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-narrative reveal">
+            <p class="lead-text">
+              I am a first-year Computer Science and Engineering undergraduate at 
+              <strong>Physics Wallah Institute of Innovation</strong> (graduating 2029). 
+              Rather than jumping between frameworks without depth, I’ve anchored my foundation in 
+              <strong>Data Structures, Algorithms, Object-Oriented Design, and Backend Systems</strong>.
+            </p>
+            <p>
+              I believe great software engineering comes from understanding both the low-level efficiency (time/space complexity, memory patterns, algorithmic invariants) and practical real-world delivery (clean REST APIs, database schemas, and intuitive customer-facing interfaces).
+            </p>
+            <p>
+              When I'm not grinding algorithmic challenges on LeetCode or preparing for competitive programming contests like ICPC, I build complete systems like <strong>Paytm VyaparAI</strong> (an AI merchant copilot with analytics and udhaar tracking) and <strong>Swaad Wallah</strong> (a robust food-ordering platform with persistent state management).
+            </p>
+
+            <div class="about-contact-strip">
+              <div class="strip-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <span>+91 9302699936</span>
+                <button class="icon-btn-subtle copy-btn" data-copy="+919302699936" title="Copy Phone Number">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                </button>
+              </div>
+              <div class="strip-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <span>coderajay86091@gmail.com</span>
+                <button class="icon-btn-subtle copy-btn" data-copy="coderajay86091@gmail.com" title="Copy Email">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-pillars reveal">
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              </div>
+              <h3>Data Structures &amp; Algorithms</h3>
+              <p>Strong algorithmic problem solving in C++ and Java with deep emphasis on graph theory, dynamic programming, trees, and complexity optimization.</p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+              </div>
+              <h3>Backend &amp; API Architecture</h3>
+              <p>Designing RESTful services with Spring Boot and Node.js, relational schema design with PostgreSQL and MySQL, and state persistence patterns.</p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              </div>
+              <h3>Full-Stack Workflows &amp; AI</h3>
+              <p>Shipping responsive applications with React.js, TypeScript, Vite, and AI toolkits to translate real-world requirements into intuitive merchant tools.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section split">
-      <div class="section-heading reveal">
-        <p class="eyebrow">01 / ABOUT</p>
-        <h2>Curious by nature.<br><span>Driven by code.</span></h2>
-      </div>
-      <div class="about-copy reveal">
-        <p>
-          I'm a B.Tech Computer Science and Engineering student at PW Institute Of Innovation
-          (Medhavi Skills University). I'm building my career around software development,
-          with a particular interest in efficient problem solving, DSA and object-oriented programming.
-        </p>
-        <p>
-          I enjoy learning by building — from responsive websites to experimenting with modern
-          development tools — and I'm looking for opportunities where I can contribute, learn fast,
-          and grow into a strong software engineer.
-        </p>
+    <!-- COMPETITIVE PROGRAMMING & METRICS SECTION -->
+    <section id="competitive" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">COMPETITIVE PROGRAMMING &amp; MILESTONES</div>
+          <h2 class="section-title">Verified Problem Solving &amp; Competition Track Record</h2>
+        </div>
+
+        <div class="stats-dashboard-grid">
+          <!-- LeetCode Interactive Card -->
+          <div class="leetcode-card reveal">
+            <div class="card-head">
+              <div class="brand-chip">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.874 5.874 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-4.201-4.12a3.257 3.257 0 0 1-.745-1.096 3.14 3.14 0 0 1-.165-.63 3.03 3.03 0 0 1 .63-2.58l3.85-4.122 5.4-5.783a1.379 1.379 0 0 0-.96-2.348zM14.6 9.3c-.76-.01-1.39.6-1.4 1.36v3.68c.01.76.64 1.37 1.4 1.36h5.8c.76.01 1.39-.6 1.4-1.36v-3.68c-.01-.76-.64-1.37-1.4-1.36H14.6z"/></svg>
+                <span>LeetCode Metric Profile</span>
+              </div>
+              <span class="badge-status">Active Solver</span>
+            </div>
+
+            <div class="leetcode-total">
+              <div class="total-big">387<span class="plus">+</span></div>
+              <div class="total-caption">Total Problems Solved Across All Difficulties</div>
+            </div>
+
+            <!-- Problem breakdown bars -->
+            <div class="problem-breakdown">
+              <div class="breakdown-row easy-row">
+                <div class="diff-header">
+                  <span class="diff-title">Easy</span>
+                  <span class="diff-count"><strong>218</strong> solved</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill fill-easy" style="width: 56.3%;"></div>
+                </div>
+              </div>
+
+              <div class="breakdown-row medium-row">
+                <div class="diff-header">
+                  <span class="diff-title">Medium</span>
+                  <span class="diff-count"><strong>158</strong> solved</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill fill-medium" style="width: 40.8%;"></div>
+                </div>
+              </div>
+
+              <div class="breakdown-row hard-row">
+                <div class="diff-header">
+                  <span class="diff-title">Hard</span>
+                  <span class="diff-count"><strong>11</strong> solved</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill fill-hard" style="width: 2.9%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="leetcode-footer-stats">
+              <div class="stat-pill">
+                <span class="stat-lbl">Contest Rating</span>
+                <span class="stat-val highlight-amber">1440</span>
+              </div>
+              <div class="stat-pill">
+                <span class="stat-lbl">Annual Badge</span>
+                <span class="stat-val highlight-green">100 Days Badge (2026)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ICPC & Hackathon Cards -->
+          <div class="achievements-column">
+            <div class="highlight-feature-card reveal">
+              <div class="feat-badge-row">
+                <span class="event-tag icpc-tag">COMPETITIVE PROGRAMMING</span>
+                <span class="year-stamp">Official Contest</span>
+              </div>
+              <h3 class="feat-title">ICPC Preliminary Contest</h3>
+              <p class="feat-desc">
+                Participated as an active team contestant in the prestigious <strong>International Collegiate Programming Contest (ICPC)</strong> Preliminary Round, solving complex algorithmic problems under strict real-time constraints and rigorous test suites.
+              </p>
+              <div class="feat-chips">
+                <span>Algorithmic Design</span>
+                <span>Team Coordination</span>
+                <span>C++ STL</span>
+                <span>Complexity Proofs</span>
+              </div>
+            </div>
+
+            <div class="highlight-feature-card reveal">
+              <div class="feat-badge-row">
+                <span class="event-tag hackathon-tag">NATIONAL HACKATHON</span>
+                <span class="year-stamp">RIFT '26</span>
+              </div>
+              <h3 class="feat-title">Unstop Freedom Festival Hackathon</h3>
+              <p class="feat-desc">
+                Competed in <strong>RIFT '26</strong>, organized by Physics Wallah Institute of Innovation on Unstop. Engineered practical technical solutions, collaborating on rapid iterative prototyping and system architecture.
+              </p>
+              <div class="feat-chips">
+                <span>Physics Wallah IOI</span>
+                <span>Rapid Prototyping</span>
+                <span>System Building</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="skills" class="section">
-      <div class="section-heading reveal">
-        <p class="eyebrow">02 / TOOLKIT</p>
-        <h2>What I work <span>with.</span></h2>
-      </div>
-      <div class="skills-grid">
-        <article class="skill-card reveal">
-          <span class="skill-number">01</span>
-          <h3>Programming</h3>
-          <div class="tags"><span>C</span><span>C++</span><span>Java</span><span>Python</span></div>
-        </article>
-        <article class="skill-card reveal">
-          <span class="skill-number">02</span>
-          <h3>Web Development</h3>
-          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-        </article>
-        <article class="skill-card reveal">
-          <span class="skill-number">03</span>
-          <h3>Developer Tools</h3>
-          <div class="tags"><span>Git</span><span>Version Control</span></div>
-        </article>
-        <article class="skill-card accent-card reveal">
-          <span class="skill-number">04</span>
-          <h3>Core Focus</h3>
-          <div class="focus-line">DSA <span>•</span> OOP <span>•</span> Problem Solving</div>
-        </article>
+    <!-- TECHNICAL SKILLS SECTION -->
+    <section id="skills" class="section section-bordered">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">TECHNICAL SKILLSET</div>
+          <h2 class="section-title">Engineered toolkit categorized by software layer.</h2>
+          <p class="section-subtitle">Categorized directly from practical project implementations and CS coursework.</p>
+        </div>
+
+        <div class="skills-matrix-grid">
+          <!-- Programming Languages -->
+          <div class="skill-category-card reveal">
+            <div class="cat-header">
+              <div class="cat-icon-wrap lang-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </div>
+              <div>
+                <h3 class="cat-title">Programming Languages</h3>
+                <span class="cat-sub">Core implementation languages</span>
+              </div>
+            </div>
+            <div class="skill-tags-cloud">
+              <div class="skill-chip primary-chip" title="Primary for DSA & ICPC">
+                <span class="chip-dot"></span>C++
+              </div>
+              <div class="skill-chip primary-chip" title="Core language for Backend Services">
+                <span class="chip-dot"></span>Java
+              </div>
+              <div class="skill-chip" title="Data analysis & scripting">Python</div>
+              <div class="skill-chip" title="Procedural programming foundation">C</div>
+              <div class="skill-chip" title="Web dynamics & async logic">JavaScript</div>
+              <div class="skill-chip" title="Memory-safe systems programming">Rust</div>
+            </div>
+          </div>
+
+          <!-- Backend & APIs -->
+          <div class="skill-category-card reveal">
+            <div class="cat-header">
+              <div class="cat-icon-wrap backend-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+              </div>
+              <div>
+                <h3 class="cat-title">Backend &amp; APIs</h3>
+                <span class="cat-sub">Service layers &amp; communication</span>
+              </div>
+            </div>
+            <div class="skill-tags-cloud">
+              <div class="skill-chip primary-chip">Java</div>
+              <div class="skill-chip primary-chip">Spring Boot</div>
+              <div class="skill-chip primary-chip">REST APIs</div>
+              <div class="skill-chip">Node.js</div>
+              <div class="skill-chip">API Design</div>
+            </div>
+          </div>
+
+          <!-- Core CS Foundations -->
+          <div class="skill-category-card reveal">
+            <div class="cat-header">
+              <div class="cat-icon-wrap cs-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+              </div>
+              <div>
+                <h3 class="cat-title">Core Computer Science</h3>
+                <span class="cat-sub">Theoretical and algorithmic depth</span>
+              </div>
+            </div>
+            <div class="skill-tags-cloud">
+              <div class="skill-chip primary-chip">Data Structures &amp; Algorithms</div>
+              <div class="skill-chip primary-chip">Object-Oriented Programming (OOP)</div>
+              <div class="skill-chip">Problem Solving</div>
+              <div class="skill-chip">Complexity Analysis (Time/Space)</div>
+            </div>
+          </div>
+
+          <!-- Databases -->
+          <div class="skill-category-card reveal">
+            <div class="cat-header">
+              <div class="cat-icon-wrap db-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+              </div>
+              <div>
+                <h3 class="cat-title">Databases &amp; Persistence</h3>
+                <span class="cat-sub">Relational &amp; Document Stores</span>
+              </div>
+            </div>
+            <div class="skill-tags-cloud">
+              <div class="skill-chip primary-chip">PostgreSQL</div>
+              <div class="skill-chip">MySQL</div>
+              <div class="skill-chip">MongoDB</div>
+              <div class="skill-chip">LocalStorage State</div>
+            </div>
+          </div>
+
+          <!-- Web Technologies -->
+          <div class="skill-category-card reveal">
+            <div class="cat-header">
+              <div class="cat-icon-wrap web-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon><line x1="12" y1="22" x2="12" y2="15.5"></line><polyline points="22 8.5 12 15.5 2 8.5"></polyline><polyline points="2 15.5 12 8.5 22 15.5"></polyline></svg>
+              </div>
+              <div>
+                <h3 class="cat-title">Web Technologies</h3>
+                <span class="cat-sub">Frontend engineering &amp; tooling</span>
+              </div>
+            </div>
+            <div class="skill-tags-cloud">
+              <div class="skill-chip primary-chip">React.js</div>
+              <div class="skill-chip primary-chip">TypeScript</div>
+              <div class="skill-chip">Vite</div>
+              <div class="skill-chip">Tailwind CSS</div>
+              <div class="skill-chip">HTML5</div>
+              <div class="skill-chip">CSS3</div>
+            </div>
+          </div>
+
+          <!-- Data & Platforms -->
+          <div class="skill-category-card reveal">
+            <div class="cat-header">
+              <div class="cat-icon-wrap tools-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+              </div>
+              <div>
+                <h3 class="cat-title">Data &amp; Platforms</h3>
+                <span class="cat-sub">Analytics libraries &amp; developer toolchains</span>
+              </div>
+            </div>
+            <div class="skill-tags-cloud">
+              <div class="skill-chip">Git &amp; GitHub</div>
+              <div class="skill-chip">IntelliJ IDEA</div>
+              <div class="skill-chip">VS Code</div>
+              <div class="skill-chip">NumPy</div>
+              <div class="skill-chip">Pandas</div>
+              <div class="skill-chip">Matplotlib &amp; Plotly</div>
+              <div class="skill-chip">Exploratory Data Analysis</div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- PROJECTS SECTION -->
     <section id="projects" class="section">
-      <div class="section-heading row-heading reveal">
-        <div>
-          <p class="eyebrow">03 / SELECTED WORK</p>
-          <h2>Things I've <span>built.</span></h2>
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">ENGINEERING PORTFOLIO</div>
+          <h2 class="section-title">Selected Projects &amp; Systems</h2>
+          <p class="section-subtitle">Real applications built for hackathons, user workflows, and state persistence.</p>
         </div>
-        <p class="heading-note">A growing collection of practical projects.</p>
+
+        <div class="projects-list">
+          <!-- PROJECT 1: Paytm VyaparAI -->
+          <article class="project-card featured-project reveal">
+            <div class="project-header-meta">
+              <div class="proj-badge-container">
+                <span class="project-type-tag">Paytm AI Hackathon</span>
+                <span class="badge-featured">Featured Project</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/ajayrawat3715" target="_blank" rel="noopener noreferrer" class="link-btn" title="View Source on GitHub">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  <span>Repository</span>
+                </a>
+                <span class="live-pill">
+                  <span class="mini-green-dot"></span> Live Demo
+                </span>
+              </div>
+            </div>
+
+            <div class="project-body-grid">
+              <div class="project-info-side">
+                <h3 class="project-title">Paytm VyaparAI <span class="proj-subtitle">(Paytm Biz Copilot)</span></h3>
+                <p class="project-description">
+                  An intelligent merchant business copilot built for the <strong>Paytm AI Hackathon</strong> that transforms raw transactional data into high-leverage commercial insights and proactive actions for Indian small business merchants.
+                </p>
+
+                <div class="project-highlights">
+                  <div class="highlight-item">
+                    <span class="h-bullet">▹</span>
+                    <div><strong>Actionable Business Intelligence:</strong> Converts daily merchant sales streams, inventory turnovers, and ledger entries into automated recommendations.</div>
+                  </div>
+                  <div class="highlight-item">
+                    <span class="h-bullet">▹</span>
+                    <div><strong>Udhaar Tracking &amp; Repayments:</strong> Built tracking workflows to monitor outstanding credit (udhaar), predict overdue risk, and schedule customer payment reminders.</div>
+                  </div>
+                  <div class="highlight-item">
+                    <span class="h-bullet">▹</span>
+                    <div><strong>Conversational Copilot:</strong> Integrated a conversational assistant allowing merchants to ask natural queries about weekly sales trends and top debtors.</div>
+                  </div>
+                </div>
+
+                <div class="project-tech-stack">
+                  <span class="tech-tag">React.js</span>
+                  <span class="tech-tag">TypeScript</span>
+                  <span class="tech-tag">Vite</span>
+                  <span class="tech-tag">Tailwind CSS</span>
+                  <span class="tech-tag">TanStack</span>
+                  <span class="tech-tag">Recharts</span>
+                  <span class="tech-tag">AI SDK</span>
+                </div>
+              </div>
+
+              <!-- Interactive Architecture Preview Card -->
+              <div class="project-visual-side">
+                <div class="arch-box">
+                  <div class="arch-header">
+                    <span class="arch-label">SYSTEM ARCHITECTURE</span>
+                    <span class="arch-stat">Paytm Biz Copilot</span>
+                  </div>
+                  <div class="arch-flow">
+                    <div class="flow-step">
+                      <div class="step-num">01</div>
+                      <div class="step-desc"><strong>Merchant Ingestion:</strong> Ingests sales ledger, customer records, and udhaar credit transactions.</div>
+                    </div>
+                    <div class="flow-step">
+                      <div class="step-num">02</div>
+                      <div class="step-desc"><strong>TanStack &amp; Recharts:</strong> Computes real-time cashflow metrics, weekly delta, and margin heatmaps.</div>
+                    </div>
+                    <div class="flow-step">
+                      <div class="step-num">03</div>
+                      <div class="step-desc"><strong>AI Copilot Core:</strong> Natural language processing to suggest customer follow-up actions and risk flags.</div>
+                    </div>
+                  </div>
+                  <div class="arch-footer">
+                    <span>Target: Retail Merchants &amp; MSMEs</span>
+                    <span class="status-ok">Production Ready Prototype</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: Swaad Wallah -->
+          <article class="project-card reveal">
+            <div class="project-header-meta">
+              <div class="proj-badge-container">
+                <span class="project-type-tag">Interactive Web Application</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/ajayrawat3715" target="_blank" rel="noopener noreferrer" class="link-btn" title="View Source on GitHub">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  <span>Repository</span>
+                </a>
+                <span class="live-pill">
+                  <span class="mini-green-dot"></span> Live Demo
+                </span>
+              </div>
+            </div>
+
+            <div class="project-body-grid">
+              <div class="project-info-side">
+                <h3 class="project-title">Swaad Wallah</h3>
+                <p class="project-description">
+                  A responsive food-ordering application engineered with pure vanilla web primitives. Built without heavyweight external client frameworks to master low-level DOM manipulations and browser storage lifecycles.
+                </p>
+
+                <div class="project-highlights">
+                  <div class="highlight-item">
+                    <span class="h-bullet">▹</span>
+                    <div><strong>Discovery &amp; Filtering:</strong> Real-time restaurant search, cuisine tag filtering, and dynamic menu renderers.</div>
+                  </div>
+                  <div class="highlight-item">
+                    <span class="h-bullet">▹</span>
+                    <div><strong>Persistent Cart Management:</strong> Custom state synchronization using <code>LocalStorage</code> maintaining quantities, dynamic taxes, and coupon pricing across reloads.</div>
+                  </div>
+                  <div class="highlight-item">
+                    <span class="h-bullet">▹</span>
+                    <div><strong>Checkout &amp; Order Tracking:</strong> Multi-step checkout pipeline with simulated live delivery tracker state machine.</div>
+                  </div>
+                </div>
+
+                <div class="project-tech-stack">
+                  <span class="tech-tag">HTML5</span>
+                  <span class="tech-tag">CSS3</span>
+                  <span class="tech-tag">JavaScript (ES6+)</span>
+                  <span class="tech-tag">LocalStorage</span>
+                </div>
+              </div>
+
+              <div class="project-visual-side">
+                <div class="arch-box">
+                  <div class="arch-header">
+                    <span class="arch-label">TECHNICAL HIGHLIGHT</span>
+                    <span class="arch-stat">Zero-Dependency State</span>
+                  </div>
+                  <div class="arch-flow">
+                    <div class="flow-step">
+                      <div class="step-num">01</div>
+                      <div class="step-desc"><strong>Event Delegation:</strong> Unified cart listener minimizing DOM re-attaches for quantity counters.</div>
+                    </div>
+                    <div class="flow-step">
+                      <div class="step-num">02</div>
+                      <div class="step-desc"><strong>Atomic Storage Sync:</strong> Safe serialization with defensive parsing to prevent corrupt stored states.</div>
+                    </div>
+                  </div>
+                  <div class="arch-footer">
+                    <span>Performance: 100/100 Lighthouse</span>
+                    <span class="status-ok">Instant Load</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3: Personal Portfolio -->
+          <article class="project-card reveal">
+            <div class="project-header-meta">
+              <div class="proj-badge-container">
+                <span class="project-type-tag">Developer Showcase &amp; CI/CD</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/ajayrawat3715/ajay-rawat-portfolio" target="_blank" rel="noopener noreferrer" class="link-btn" title="View Source on GitHub">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  <span>Repository</span>
+                </a>
+                <span class="live-pill">
+                  <span class="mini-green-dot"></span> Vercel / GitHub
+                </span>
+              </div>
+            </div>
+
+            <div class="project-body-grid">
+              <div class="project-info-side">
+                <h3 class="project-title">Engineered Personal Portfolio</h3>
+                <p class="project-description">
+                  Designed and deployed a responsive, high-performance portfolio showcasing technical competencies, verified competitive programming metrics, and project workflows. Built with an embedded interactive developer shell and zero AI boilerplate feel.
+                </p>
+
+                <div class="project-tech-stack">
+                  <span class="tech-tag">HTML5</span>
+                  <span class="tech-tag">CSS3</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">Git</span>
+                  <span class="tech-tag">GitHub</span>
+                  <span class="tech-tag">Vercel</span>
+                </div>
+              </div>
+
+              <div class="project-visual-side">
+                <div class="arch-box">
+                  <div class="arch-header">
+                    <span class="arch-label">HIGHLIGHTS</span>
+                    <span class="arch-stat">Accessible &amp; Swift</span>
+                  </div>
+                  <div class="arch-flow">
+                    <div class="flow-step">
+                      <div class="step-num">01</div>
+                      <div class="step-desc"><strong>Zero-Bloat Architecture:</strong> Pure vanilla assets ensure instantaneous loading and zero render-blocking dependencies.</div>
+                    </div>
+                  </div>
+                  <div class="arch-footer">
+                    <span>Version Controlled: GitHub CI</span>
+                    <span class="status-ok">Up to Date</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
-      <article class="project reveal">
-        <div class="project-index">01</div>
-        <div class="project-main">
-          <p class="project-type">WEB · HTML / CSS / JAVASCRIPT</p>
-          <h3>Personal Portfolio Website</h3>
-          <p>Responsive portfolio website created to showcase skills, projects and developer experience, with Git and version-control practices used throughout development.</p>
-          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Git</span></div>
-        </div>
-        <div class="project-arrow">↗</div>
-      </article>
     </section>
 
-    <section id="certifications" class="section">
-      <div class="section-heading reveal">
-        <p class="eyebrow">04 / CREDENTIALS</p>
-        <h2>Learning beyond <span>the classroom.</span></h2>
-      </div>
-      <div class="credentials">
-        <div class="credential reveal"><span>01</span><div><h3>Google MLOps for Generative AI</h3><p>Certification</p></div></div>
-        <div class="credential reveal"><span>02</span><div><h3>Develop Serverless Applications on Cloud Run</h3><p>Certification</p></div></div>
-        <div class="credential reveal"><span>03</span><div><h3>GDG Cloud Noida</h3><p>Chapter Member</p></div></div>
-        <div class="credential reveal"><span>04</span><div><h3>NVIDIA Developer Badge</h3><p>Developer Credential</p></div></div>
+    <!-- EDUCATION & CERTIFICATIONS SECTION -->
+    <section id="education" class="section section-bordered">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">ACADEMIC BACKGROUND &amp; CREDENTIALS</div>
+          <h2 class="section-title">Education &amp; Verified Certifications</h2>
+        </div>
+
+        <div class="edu-cert-grid">
+          <!-- Degree Card -->
+          <div class="edu-card reveal">
+            <div class="edu-badge">DEGREE</div>
+            <div class="edu-date">2025 — 2029 (Expected)</div>
+            <h3 class="edu-title">B.Tech, Computer Science &amp; Engineering</h3>
+            <div class="edu-institute">Physics Wallah Institute of Innovation</div>
+            <div class="edu-score-pill">
+              <span class="score-label">First Year CGPA:</span>
+              <strong class="score-value">8.0 / 10.0</strong>
+            </div>
+            <p class="edu-desc">
+              Rigorous curriculum focused on Object-Oriented Programming, Data Structures, Discrete Mathematics, Computer Organization, Database Systems, and scalable software architecture.
+            </p>
+          </div>
+
+          <!-- Certifications List -->
+          <div class="certifications-list">
+            <!-- Cert 1 -->
+            <div class="cert-item reveal">
+              <div class="cert-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l3.09 6.26L22 7.27l-5 4.87 1.18 6.88L12 15.77l-6.18 3.25L7 12.14 2 7.27l6.91-1.01L12 0z"/></svg>
+              </div>
+              <div class="cert-content">
+                <div class="cert-meta">
+                  <span class="cert-issuer">HackerRank</span>
+                  <span class="cert-date">Oct 2026</span>
+                </div>
+                <h4 class="cert-name">Software Engineer Intern Role Certification</h4>
+                <p class="cert-desc">Assessment covering core algorithmic logic, data structures implementation, problem solving, and standard software engineering competencies.</p>
+              </div>
+            </div>
+
+            <!-- Cert 2 -->
+            <div class="cert-item reveal">
+              <div class="cert-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              </div>
+              <div class="cert-content">
+                <div class="cert-meta">
+                  <span class="cert-issuer">IBM Skills Network / Physics Wallah</span>
+                  <span class="cert-date">Jun 2026</span>
+                </div>
+                <h4 class="cert-name">Project Based Learning: Full Stack Development (Beginner)</h4>
+                <p class="cert-desc">Hands-on practical full-stack fundamentals, development workflows, and modern web application delivery.</p>
+              </div>
+            </div>
+
+            <!-- Cert 3 -->
+            <div class="cert-item reveal">
+              <div class="cert-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.99L19.53 19H4.47L12 5.99zM11 10h2v4h-2zm0 6h2v2h-2z"/></svg>
+              </div>
+              <div class="cert-content">
+                <div class="cert-meta">
+                  <span class="cert-issuer">IBM Skills Network</span>
+                  <span class="cert-date">Verified Credential</span>
+                </div>
+                <h4 class="cert-name">HTML, CSS, and JavaScript Fundamentals (Intermediate)</h4>
+                <p class="cert-desc">Comprehensive certification covering semantic HTML, responsive layout patterns, DOM manipulation, asynchronous programming, and event handling.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="contact" class="contact section">
-      <div class="contact-inner reveal">
-        <p class="eyebrow">05 / CONTACT</p>
-        <h2>Let's build something<br><span>worth talking about.</span></h2>
-        <p>Open to internship and junior developer opportunities.</p>
-        <a class="big-mail" href="mailto:AjayRawat7110@gmail.com">AjayR7110@gmail.com ↗</a>
-        <div class="contact-meta">
-          <span>Ghaziabad, Uttar Pradesh</span>
-          <span>+91 90688 07110</span>
-          <span>English · Hindi</span>
+    <!-- CONTACT & DIRECT CONNECT SECTION -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="contact-card-wrapper reveal">
+          <div class="contact-header">
+            <div class="section-tag">GET IN TOUCH</div>
+            <h2 class="contact-title">Let’s discuss SDE opportunities &amp; impactful projects.</h2>
+            <p class="contact-sub">
+              I am actively looking for <strong>Software Development Engineer Intern</strong> roles for 2026. 
+              Whether you have an internship opening, an interesting backend problem, or want to collaborate on competitive programming, my inbox is open.
+            </p>
+          </div>
+
+          <div class="contact-details-grid">
+            <!-- Email Box -->
+            <div class="detail-box">
+              <div class="box-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div class="box-text">
+                <span class="box-lbl">EMAIL</span>
+                <a href="mailto:coderajay86091@gmail.com" class="box-val">coderajay86091@gmail.com</a>
+              </div>
+              <button class="btn btn-outline btn-xs copy-btn" data-copy="coderajay86091@gmail.com" title="Copy Email">
+                Copy
+              </button>
+            </div>
+
+            <!-- Phone Box -->
+            <div class="detail-box">
+              <div class="box-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <div class="box-text">
+                <span class="box-lbl">PHONE</span>
+                <a href="tel:+919302699936" class="box-val">+91 9302699936</a>
+              </div>
+              <button class="btn btn-outline btn-xs copy-btn" data-copy="+919302699936" title="Copy Phone">
+                Copy
+              </button>
+            </div>
+
+            <!-- GitHub Box -->
+            <div class="detail-box">
+              <div class="box-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </div>
+              <div class="box-text">
+                <span class="box-lbl">GITHUB</span>
+                <a href="https://github.com/ajayrawat3715" target="_blank" rel="noopener noreferrer" class="box-val">ajayrawat3715</a>
+              </div>
+              <a href="https://github.com/ajayrawat3715" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-xs">
+                Visit ↗
+              </a>
+            </div>
+
+            <!-- Focus Strip -->
+            <div class="detail-box">
+              <div class="box-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
+              <div class="box-text">
+                <span class="box-lbl">PRIMARY FOCUS</span>
+                <span class="box-val highlight-cyan">Java • C++ • DSA • Backend Services</span>
+              </div>
+              <span class="badge-status">Active</span>
+            </div>
+          </div>
+
+          <!-- Direct Fast Action Bar -->
+          <div class="contact-action-bar">
+            <a href="mailto:coderajay86091@gmail.com" class="btn btn-primary">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              <span>Send Direct Email</span>
+            </a>
+            <button class="btn btn-secondary copy-btn" data-copy="coderajay86091@gmail.com">
+              <span>Copy Email to Clipboard</span>
+            </button>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <span>© 2026 Ajay Rawat</span>
-    <span>Built with HTML · CSS · JavaScript</span>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <span class="footer-logo">ajay.rawat<span>/&gt;</span></span>
+        <span class="footer-copy">© 2026 Ajay Rawat. Engineered with semantic HTML, CSS &amp; vanilla JS.</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/ajayrawat3715" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="#competitive">LeetCode (387+)</a>
+        <a href="mailto:coderajay86091@gmail.com">coderajay86091@gmail.com</a>
+        <a href="#home">Back to top ↑</a>
+      </div>
+    </div>
   </footer>
 
   <script src="script.js"></script>
