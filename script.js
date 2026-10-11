@@ -139,11 +139,14 @@ document.addEventListener('DOMContentLoaded', () => {
     projects: () => `
       <div>
         1. <span class="t-green">Paytm VyaparAI</span> (Paytm Biz Copilot) [React, TS, Vite, TanStack, Recharts, AI SDK]<br>
-        &nbsp;&nbsp;&nbsp;↳ AI merchant copilot for sales analytics, udhaar tracking & cashflow trends.<br><br>
+        &nbsp;&nbsp;&nbsp;↳ AI merchant copilot for sales analytics, udhaar tracking & cashflow trends.<br>
+        &nbsp;&nbsp;&nbsp;↳ Live Demo: <a href="https://paytm-biz-copilot.vercel.app" target="_blank" class="t-key">paytm-biz-copilot.vercel.app ↗</a><br><br>
         2. <span class="t-green">Swaad Wallah</span> [HTML, CSS, JS, LocalStorage]<br>
-        &nbsp;&nbsp;&nbsp;↳ Responsive food-ordering app with persistent cart & order tracking.<br><br>
+        &nbsp;&nbsp;&nbsp;↳ Responsive food-ordering app with persistent cart & order tracking.<br>
+        &nbsp;&nbsp;&nbsp;↳ Live Demo: <a href="https://swaad-wallah.vercel.app" target="_blank" class="t-key">swaad-wallah.vercel.app ↗</a><br><br>
         3. <span class="t-green">Personal Portfolio</span> [HTML5, CSS3, JS, Git, Vercel]<br>
-        &nbsp;&nbsp;&nbsp;↳ High-performance zero-bloat portfolio showcasing technical systems.
+        &nbsp;&nbsp;&nbsp;↳ High-performance zero-bloat portfolio showcasing technical systems.<br>
+        &nbsp;&nbsp;&nbsp;↳ Live Demo: <a href="https://ajay-rawat-portfolio-eight.vercel.app" target="_blank" class="t-key">ajay-rawat-portfolio-eight.vercel.app ↗</a>
       </div>
     `,
     dsa: () => `
