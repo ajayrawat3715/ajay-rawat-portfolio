@@ -22,7 +22,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
     const text = `AJAY RAWAT
 Frontend Developer Intern ⋄ React.js ⋄ Hooks ⋄ Responsive UI
 Phone: +91 9302699936 | Email: coderajay86091@gmail.com
-Portfolio: https://ajay-rawat-portfolio-eight.vercel.app/
+Portfolio: https://ajay-rawat-portfolio.vercel.app/
 GitHub: https://github.com/ajayrawat3715
 LinkedIn: https://www.linkedin.com/in/ajay-rawat-78a7b2390/
 LeetCode: https://leetcode.com/u/ajayrawat3715/
@@ -55,7 +55,7 @@ PROJECTS
    - Developed a responsive app with restaurant discovery, search, cuisine filters, cart, checkout, and order tracking.
    - Implemented persistent cart state, quantity controls, dynamic pricing, and filtering.
 
-3. Personal Portfolio | https://ajay-rawat-portfolio-eight.vercel.app/
+3. Personal Portfolio | https://ajay-rawat-portfolio.vercel.app/
    HTML, CSS, JavaScript, Git, GitHub, Vercel
    - Built and deployed a responsive portfolio showcasing projects and credentials, maintained through Git and GitHub.
 

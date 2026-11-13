@@ -23,7 +23,7 @@ A distinctive, high-craft, futuristic developer portfolio engineered with **Next
 - **Interactive Project Showcase**:
   - **Paytm VyaparAI (Paytm Biz Copilot)**: Full-stack merchant intelligence platform live on Vercel (React, TypeScript, Vite, TanStack Query, Recharts, AI SDK).
   - **Swaad Wallah**: Interactive food discovery and online ordering web application live on Vercel (HTML, CSS, JavaScript, LocalStorage).
-  - **Personal Portfolio**: Fully responsive developer portfolio deployed on Vercel.
+  - **Personal Portfolio**: Fully responsive developer portfolio deployed on Vercel: [ajay-rawat-portfolio.vercel.app](https://ajay-rawat-portfolio.vercel.app/).
 - **Open-Source Experience (Ceph - ceph.io)**:
   - Official contributor to Ceph.
   - Merged pull request addressing site page bugs.

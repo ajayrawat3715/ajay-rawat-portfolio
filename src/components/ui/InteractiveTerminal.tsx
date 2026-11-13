@@ -76,7 +76,7 @@ export const InteractiveTerminal: React.FC = () => {
           <div className="space-y-1.5 text-xs text-sand-dim">
             <div>1. <span className="text-sand font-bold">Paytm VyaparAI (Paytm Biz Copilot)</span> - Live on Vercel: https://paytm-biz-copilot.vercel.app/ (React, TypeScript, Vite, TanStack, Recharts, AI SDK)</div>
             <div>2. <span className="text-sand font-bold">Swaad Wallah</span> - Live on Vercel: https://swaad-wallah.vercel.app/ (HTML, CSS, JS, LocalStorage)</div>
-            <div>3. <span className="text-sand font-bold">Personal Portfolio</span> - Live on Vercel: https://ajay-rawat-portfolio-eight.vercel.app/ (HTML, CSS, JS, Git, GitHub)</div>
+            <div>3. <span className="text-sand font-bold">Personal Portfolio</span> - Live on Vercel: https://ajay-rawat-portfolio.vercel.app/ (HTML, CSS, JS, Git, GitHub)</div>
           </div>
         );
         break;
