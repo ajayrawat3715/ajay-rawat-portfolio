@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --canvas-bg: #05070B;
+  --canvas-surface: #0F1623;
+  --accent-color: #00E5FF;
+  --accent-glow: rgba(0, 229, 255, 0.3);
+  --text-primary: #F0F6FC;
+  --text-secondary: #8B949E;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #05070B;
+  color: #F0F6FC;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #05070B;
+  color: #F0F6FC;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Subtle futuristic tech-mesh grid */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.04;
+  background-image: 
+    linear-gradient(to right, rgba(0, 229, 255, 0.4) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 229, 255, 0.4) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+/* High-voltage futuristic selection */
+::selection {
+  background-color: #00E5FF;
+  color: #05070B;
+}
+
+/* Tabular figures for clean numbers */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Futuristic scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #05070B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E2B40;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00E5FF;
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid #00E5FF;
+  outline-offset: 2px;
+}
+
+/* Futuristic Monospace HUD badge */
+.hud-badge {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #00E5FF;
+}
+
+/* Futuristic Hairline Borders */
+.border-hud {
+  border: 1px solid rgba(0, 229, 255, 0.15);
+}
+
+.border-hud-bright {
+  border: 1px solid rgba(0, 229, 255, 0.4);
+}
+
+/* Cyber Glow utility */
+.glow-cyan {
+  box-shadow: 0 0 25px -4px rgba(0, 229, 255, 0.35);
+}
+
+.glow-mint {
+  box-shadow: 0 0 25px -4px rgba(0, 245, 160, 0.35);
+}

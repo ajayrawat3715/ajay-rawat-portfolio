@@ -1,77 +1,83 @@
-# Ajay Rawat — Software Development Engineer Portfolio
+# Ajay Rawat — Software Engineering Portfolio
 
-A handcrafted, high-performance developer portfolio built according to the verified resume of **Ajay Rawat**.
-
-Designed with an authentic software engineer aesthetic (obsidian slate surfaces, refined typography, zero generic AI boilerplate) featuring an embedded interactive developer shell, real-time LeetCode metrics visualizer, and architectural breakdowns of shipped systems.
+A distinctive, high-craft, futuristic developer portfolio engineered with **Next.js 14**, **TypeScript**, and **Tailwind CSS**. Designed specifically to capture technical recruiters and engineering managers for Frontend Development, Software Engineering, and Full Stack Development internships.
 
 ---
 
-## 👨‍💻 Candidate Overview
+## ⚡ Tech Stack & Architecture
 
-- **Name**: Ajay Rawat
-- **Target Role**: Software Development Engineer Intern (Java • C++ • DSA • Backend)
-- **Institution**: Physics Wallah Institute of Innovation (B.Tech CSE, 2025 – 2029)
-- **First Year CGPA**: 8.0 / 10.0
+- **Framework**: [Next.js 14 (App Router)](https://nextjs.org/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling & Design System**: [Tailwind CSS](https://tailwindcss.com/)
+- **Theme**: Deep Space Obsidian (`#05070B`) + Electric Cyber Cyan (`#00E5FF`) with telemetry accents
+- **Audio**: Zero-dependency Web Audio API tactile mechanical audio feedback system
+- **CLI Shell**: Embedded interactive browser terminal with runnable commands
+- **Icons**: [Lucide Icons](https://lucide.dev/)
+- **Typography**: Editorial monospace pairing (JetBrains Mono & Plus Jakarta Sans)
+
+---
+
+## 🛠️ Features & Recruiter Experience
+
+- **Executive Recruiter Summary (30s Fast Scan)**: Immediate visibility into core qualifications, target roles, academic record (PW IOI, CGPA 8.0/10), and availability for internships.
+- **Interactive Project Showcase**:
+  - **Paytm VyaparAI (Paytm Biz Copilot)**: Full-stack merchant intelligence platform live on Vercel (React, TypeScript, Vite, TanStack Query, Recharts, AI SDK).
+  - **Swaad Wallah**: Interactive food discovery and online ordering web application live on Vercel (HTML, CSS, JavaScript, LocalStorage).
+  - **Personal Portfolio**: Fully responsive developer portfolio deployed on Vercel.
+- **Open-Source Experience (Ceph - ceph.io)**:
+  - Official contributor to Ceph.
+  - Merged pull request addressing site page bugs.
+  - Authored comprehensive written UX review and feedback for Ceph redesign working group.
+- **DSA & Competitive Programming Dashboard**:
+  - **400+ Algorithmic Problems Solved** across LeetCode & Codeforces.
+  - **106-Day Maximum Practice Streak**.
+  - **ICPC Preliminary Contest** official team participant.
+  - **LeetCode Contest Rating**: 1440 (100 Days Badge).
+- **Verified Certifications & Competitions**:
+  - **ICPC Preliminary Contest**: Official team participant.
+  - **Paytm AI Hackathon**: Shipped Paytm VyaparAI merchant copilot.
+  - **RIFT '26**: Unstop Freedom Festival Hackathon (Physics Wallah Institute of Innovation).
+  - **HackerRank**: Software Engineer Intern Role Certification (Oct 2026).
+  - **IBM Skills Network**: HTML, CSS, and JavaScript Fundamentals (Intermediate) & Project Based Learning FSD.
+- **Embedded Interactive Terminal Shell**:
+  - Clickable floating terminal simulator supporting `help`, `skills`, `projects`, `experience`, `icpc`, `contact`, and `sudo hire ajay`.
+- **Tactile Web Audio Feedback**:
+  - Native Web Audio API tone synthesis for button presses, sound toggle, and terminal interactions.
+- **Command Palette (`Cmd+K` / `Ctrl+K`)**: Rapid keyboard-driven navigation across sections, profiles, and actions.
+- **Curriculum Vitae Modal**: Accurate resume view aligned with official PDF resume.
+
+---
+
+## 🚀 Getting Started
+
+### 1. Install dependencies
+```bash
+npm install
+```
+
+### 2. Run local development server
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### 3. Build for production
+```bash
+npm run build
+npm run start
+```
+
+---
+
+## 👤 Profile & Coding Profiles
+
+- **Candidate**: Ajay Rawat
+- **Degree**: B.Tech in Computer Science and Engineering (Graduation: 2029)
+- **Institution**: Physics Wallah Institute of Innovation (CGPA: 8.0 / 10)
 - **Email**: `coderajay86091@gmail.com`
 - **Phone**: `+91 9302699936`
+- **Location**: Noida, Uttar Pradesh, India
 - **GitHub**: [github.com/ajayrawat3715](https://github.com/ajayrawat3715)
-
----
-
-## 🏆 Key Achievements & Problem Solving
-
-- **LeetCode**: 387+ Problems Solved
-  - Easy: 218
-  - Medium: 158
-  - Hard: 11
-  - Contest Rating: 1440
-  - Milestone: 100 Days Badge (2026)
-- **Competitive Contests**:
-  - ICPC Preliminary Contest (Team Contestant)
-  - RIFT '26 — Unstop Freedom Festival Hackathon (Physics Wallah Institute of Innovation)
-- **Verified Certifications**:
-  - HackerRank: Software Engineer Intern Role Certification (Oct 2026)
-  - IBM Skills Network / Physics Wallah: Project Based Learning: FSD, Beginner (Jun 2026)
-  - IBM Skills Network: HTML, CSS, and JavaScript Fundamentals (Intermediate)
-
----
-
-## 🛠️ Technical Stack
-
-- **Languages**: C++, Java, Python, C, JavaScript, Rust
-- **Backend & APIs**: Java, Spring Boot, REST APIs, Node.js
-- **Databases**: PostgreSQL, MySQL, MongoDB, LocalStorage
-- **Core CS**: Data Structures & Algorithms, Object-Oriented Programming (OOP), Complexity Analysis
-- **Web**: React.js, TypeScript, Vite, Tailwind CSS, HTML5, CSS3
-- **Tools**: Git, GitHub, IntelliJ IDEA, VS Code, Google Colab, Jupyter Notebook
-- **Data & Analytics**: NumPy, Pandas, Matplotlib, Plotly, Exploratory Data Analysis
-
----
-
-## 🚀 Shipped Projects
-
-1. **Paytm VyaparAI (Paytm Biz Copilot)**
-   - *Tech*: React.js, TypeScript, Vite, Tailwind CSS, TanStack, Recharts, AI SDK
-   - *Summary*: AI merchant copilot for the Paytm AI Hackathon, converting transactions into actionable cashflow insights, udhaar tracking, and conversational sales analysis.
-
-2. **Swaad Wallah**
-   - *Tech*: HTML5, CSS3, JavaScript (ES6+), LocalStorage
-   - *Summary*: Responsive food-ordering web application featuring zero-dependency local-first cart persistence, real-time filters, dynamic billing, and order tracking.
-
-3. **Personal Developer Portfolio**
-   - *Tech*: HTML5, CSS3, Vanilla JS, Git, GitHub, Vercel
-   - *Summary*: Zero-bloat, accessible portfolio with an interactive developer REPL shell and verified LeetCode progress dashboard.
-
----
-
-## 💻 Running Locally
-
-Simply open `index.html` in any modern web browser or serve via Python / Node:
-
-```bash
-# Using Python
-python3 -m http.server 3000
-
-# Or using npx serve
-npx serve .
-```
+- **LeetCode**: [leetcode.com/u/ajayrawat3715](https://leetcode.com/u/ajayrawat3715/)
+- **Codeforces**: [codeforces.com/profile/ajay_rawat01](https://codeforces.com/profile/ajay_rawat01)
+- **LinkedIn**: [linkedin.com/in/ajay-rawat-78a7b2390](https://linkedin.com/in/ajay-rawat-78a7b2390/)
